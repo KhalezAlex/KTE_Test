@@ -12,5 +12,5 @@ public interface IDaoDb<E> {
 
     E update(E e);
 
-    E delete(Integer id);
+    void delete(Integer id);
 }

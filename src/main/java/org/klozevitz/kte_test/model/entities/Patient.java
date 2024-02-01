@@ -1,21 +1,29 @@
 package org.klozevitz.kte_test.model.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Data
-@Getter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "patient_t")
 public class Patient {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "uuid")
     private String uuid;
+    @Column(name = "fio")
     private String fio;
+    @Column(name = "birthdate")
     private LocalDate birthdate;
+    @Column(name = "sex")
     private String sex;
-//    private String anamnesis;
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
+    private Set<Ticket> tickets;
 }

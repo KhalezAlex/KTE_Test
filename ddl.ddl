@@ -21,8 +21,8 @@ CREATE TABLE patients_t (
 
 CREATE TABLE tickets_t (
                            id SERIAL NOT NULL PRIMARY KEY,
-                           doctor_id INT NOT NULL,
-                           patient_id INT,
+                           doc_id INT NOT NULL,
+                           pat_id INT,
                            datetime TIMESTAMP NOT NULL,
                            FOREIGN KEY (doctor_id) REFERENCES doctors_t(id),
                            FOREIGN KEY (patient_id) REFERENCES patients_t(id)
