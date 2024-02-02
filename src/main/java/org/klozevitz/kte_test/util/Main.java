@@ -11,11 +11,12 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
+/**
+ * Класс для генерации скрипта на заполнение таблицы с пациентами и докторами
+ * */
+
+
 public class Main {
-//    private static final ArrayList<String> doctors = new ArrayList<>(List.of("педиатр", "педиатр", "невролог", "невролог",
-//            "хирург", "хирург", "стоматолог", "стоматолог", "офтальмолог", "офтальмолог",
-//            "отоларинголог", "отоларинголог", "психиатр", "психиатр", "акушер-гиниколог", "акушер-гиниколог",
-//            "уролог-андролог", "уролог-андролог"));
     public static void main(String[] args) throws IOException {
         String file = "full_base.txt";
         StringBuilder sbP = new StringBuilder("INSERT INTO patients_t (uuid, fio, birthDate, sex) VALUES (\n");

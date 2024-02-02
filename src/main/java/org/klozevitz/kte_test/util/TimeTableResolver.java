@@ -14,6 +14,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Класс, который, на основе правил, полученных в SOAP-сервисе, генерирует таблицу с талонами к врачам
+ * Врачи принимают парами и посменно.
+ * В четные недели у одного утренняя смена, в нечетные недели- у его коллеги и, соответственно,
+ * наоборот.
+ * */
+
 @Service
 @RequiredArgsConstructor
 public class TimeTableResolver {
