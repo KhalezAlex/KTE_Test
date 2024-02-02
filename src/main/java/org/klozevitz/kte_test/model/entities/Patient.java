@@ -1,8 +1,8 @@
 package org.klozevitz.kte_test.model.entities;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -11,7 +11,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "patient_t")
+@Table(name = "patients_t")
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

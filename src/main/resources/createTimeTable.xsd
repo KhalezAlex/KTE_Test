@@ -1,0 +1,25 @@
+<!--<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"-->
+<!--           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+    <xs:element name="createTimeTableRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="date" type="xs:string"/>
+                <xs:element name="startTime" type="xs:string"/>
+                <xs:element name="endTime" type="xs:string"/>
+                <xs:element name="period" type="xs:int"/>
+                <xs:element name="duration" type="xs:int"/>
+                <xs:element name="quartzTimesPerDay" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createTimeTableResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="code" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

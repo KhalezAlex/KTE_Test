@@ -1,4 +1,4 @@
-package org.klozevitz.kte_test.model;
+package org.klozevitz.kte_test.util;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -20,8 +20,9 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class TimeTableRule {
     private final LocalDateTime dateTime;
-    private final int timeSlotMinutes;
+    private final String startTime;
+    private final String endTime;
+    private final int duration;
     private final int quartzTimesAmount;
-    private final int timeOutAmount;
     private final int period;
 }
