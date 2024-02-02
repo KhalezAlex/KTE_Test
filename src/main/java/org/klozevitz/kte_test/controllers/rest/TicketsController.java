@@ -23,7 +23,7 @@ public class TicketsController {
     }
 
     @PostMapping("/takeTicketById")
-    public void takeTicketById(int ticketId, Patient patient) {
+    public void takeTicketsById(int ticketId, Patient patient) {
         daoTicket.takeTicketById(ticketId, patient);
     }
 
