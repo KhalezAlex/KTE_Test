@@ -3,8 +3,9 @@ package org.klozevitz.kte_test.util;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 /**
  * Класс, определяющий правило заполнения расписания (тестовый)
@@ -17,12 +18,13 @@ import java.time.LocalDateTime;
 
 @Builder
 @Getter
+@ToString
 @RequiredArgsConstructor
 public class TimeTableRule {
-    private final LocalDateTime dateTime;
+    private final LocalDate date;
     private final String startTime;
     private final String endTime;
     private final int duration;
-    private final int quartzTimesAmount;
+//    private final int quartzTimesAmount;
     private final int period;
 }
